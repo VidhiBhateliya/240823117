@@ -139,4 +139,184 @@
 //     console.log("Not prime")
 
 //console.log("10. Count Digits in a Number")
+// let num = 5023
+// let count = 0
+// while (num > 0) {
+//   count++
+//   num = (num - num % 10) / 10
+// }
+// console.log(count)
 
+// console.log("11. Sum of Digits")
+
+// let num = 123
+// let sum = 0
+// while (num > 0) {
+//   sum = sum + num % 10;          
+//   num = (num - num % 10) / 10    
+// }
+// console.log(sum)
+
+// console.log("13. Generate Fibonacci Series ")
+
+// let n = 5
+// let a = 0, b = 1, c
+
+// for (let i = 0; i < n; i++) {
+//   console.log(a)
+//   c = a + b
+//   a = b
+//   b = c
+// }
+
+// console.log("14.  Check Vowel or Consonant  ")
+
+// let char = 'v'
+
+// if (
+//   char === 'a' || char === 'e' || char === 'i' ||
+//   char === 'o' || char === 'u' ||
+//   char === 'A' || char === 'E' || char === 'I' ||
+//   char === 'O' || char === 'U'
+// ) 
+// {
+//   console.log("Vowel")
+// } 
+// else 
+// {
+//   console.log("Consonant")
+// }
+
+
+//console.log("15. Simple Calculator ")
+// let a = 4
+// let b = 5
+// let val = '+'
+
+
+// if(val === '+')
+//   console.log(a+b)
+// else if(val === '-')
+//   console.log(a-b)
+// else if(val === '*')
+//   console.log(a*b)
+// else
+//   console.log(a/b)
+
+
+//console.log("16.Find GCD (HCF) ")
+
+// let a = 20
+// let b = 28
+// let temp
+
+// while (b != 0)
+// {
+//   temp = b
+//   b = a % b
+//   a = temp
+// }
+
+// console.log(a)
+
+//console.log("17.  Check Perfect Number ")
+
+// let num = 28
+// let sum = 0
+
+// for (let i = 1; i < num; i++) {
+//   if (num % i === 0) {
+//     sum += i
+//   }
+// }
+
+// if (sum === num) 
+// {
+//   console.log("Perfect")
+// }
+// else
+// {
+//   console.log("Not Perfect")
+// }
+
+
+
+//console.log("18. Print all Divisors")
+
+// let num = 10;
+
+// for (let i = 1; i <= num; i++) {
+//   if (num % i === 0) {
+//     console.log(i);
+//   }
+// }
+
+
+//console.log("19. Print all Divisors")
+
+// let num=-1
+// if (num > 0) {
+//     console.log("Positive")
+//   } else if (num < 0) {
+//     console.log("Negative")
+//   } else {
+//     console.log("Zero")
+//   }
+  
+//console.log("20 . Print all Divisors")
+
+// let a = 2
+// let b = 3
+
+
+// console.log(a ** b)
+
+
+//-------------------------------------------------------------------------------------------------------------
+//--------------------------------------------------------------------------------------------------------------
+
+//practice 22-july
+//using import and add one file "add.js"
+// import add from "./add.js"
+// console.log(add(11,22))
+
+
+//packages/libraries
+//modules-path
+
+
+// import path from "path"
+// const path = require("path")
+// console.log(path.basename("/myfile.txt"))
+// console.log("director name",__dirname)
+
+// console.log("full path",path.resolve(__dirname,"myfile.txt"))
+
+
+//modules-moment
+
+//print current date and time
+
+// const moment = require("moment")
+
+// console.log("current date and timne",moment().format("yyyy-mm-dd HH:mm:ss"))
+
+
+//modules-fs
+
+// const fs = require("fs")
+// fs.writeFile("myfile.txt","helloworld",(err)=>{
+//     if(err) throw err
+// })
+// console.log("file saved")
+
+//method-2
+// const fs = require("fs")
+// // fs.writeFile("myfile.txt","helloworld",(err)=>
+// // {
+// //     console.log(err || "file saved")
+// // })
+
+// fs.readFile("myfile.txt","utf-8",(err,data)=>{
+//     console.log(err || "file saved",data)
+// })
