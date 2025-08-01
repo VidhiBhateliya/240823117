@@ -320,3 +320,86 @@
 // fs.readFile("myfile.txt","utf-8",(err,data)=>{
 //     console.log(err || "file saved",data)
 // })
+
+
+//Practice 30-july
+
+
+// const express = require("express");
+// const app = express()
+
+// app.get("/",(req,res)=>{
+//     res.send("hello");
+// });
+
+// app.listen(80,()=>{
+// console.log("server is running at http://localhost:80/");
+// });
+
+//-----------------------------------------------------------------------
+
+
+
+// const express = require("express");
+// const app = express();
+// app.use(express.json());
+
+// //index (to get all the data)
+
+// app.get("/",(req,res)=>{
+//     res.send("all students!");
+// });
+
+// // show (to get all the specific data)
+
+// app.get("/show/:id",(req,res)=>{
+//     res.send(show student with id:${req.params.id});
+// });
+
+// // store (to add new data)
+
+// app.post("/store",(req,res)=>{
+//     res.send(insert ${req.body.name},${req.body.city} into database)
+// })
+
+// app.put("/update/:id",(req,res)=>{
+//     res.send(update ${req.params.id}-${req.body.name},${req.body.city} into database)
+// })
+
+// app.delete("/delete/:id",(req,res)=>{
+//     res.send("delete student")
+// })
+
+// app.listen(80,()=>{
+//     console.log("server is running at http://localhost:80/");
+// })
+
+
+//controller 
+
+const express=require("express");
+
+const {
+    index,
+    show,
+    store,
+    update,
+}=require("./controller/studentcontroller.js");
+
+const app=express();
+
+const port = 80;
+
+app.use(express.json());
+
+app.get("/",index);
+
+app.get("/show/:id",show);
+
+app.post("/store",store);
+
+app.put("/update/:id",update);
+
+app.listen(80,()=>{
+        console.log("server is running at http://localhost:80/");
+    })
