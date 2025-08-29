@@ -375,31 +375,49 @@
 // })
 
 
-//controller 
+//controller (when use only controller there will be 2 files controller and index.js)
 
-const express=require("express");
+// const express=require("express");
 
-const {
-    index,
-    show,
-    store,
-    update,
-}=require("./controller/studentcontroller.js");
+// const {
+//     index,
+//     show,
+//     store,
+//     update,
+// }=require("./controller/studentcontroller.js");
 
-const app=express();
+// const app=express();
 
-const port = 80;
+// const port = 80;
 
-app.use(express.json());
+// app.use(express.json());
 
-app.get("/",index);
+// app.get("/",index);
 
-app.get("/show/:id",show);
+// app.get("/show/:id",show);
 
-app.post("/store",store);
+// app.post("/store",store);
 
-app.put("/update/:id",update);
+// app.put("/update/:id",update);
+
+// app.listen(80,()=>{
+//         console.log("server is running at http://localhost:80/");
+//     })
+
+
+//Route 
+
+const express=require("express")
+const studentrouter = require("./route/studentroute.js")
+
+const app=express()
+
+const port = 80
+
+app.use(express.json())
+
+app.use("/student",studentrouter)
 
 app.listen(80,()=>{
-        console.log("server is running at http://localhost:80/");
-    })
+         console.log("server is running at http://localhost:80/");
+     })
